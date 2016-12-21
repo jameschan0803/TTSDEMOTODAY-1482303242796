@@ -1,0 +1,16 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: TTSDEMOTODAY
+  host: TTSDEMOTODAY
+  disk_quota: 1024M
+  services:
+  - availability-monitoring-auto
+  - Speech to Text-demoToday
+  - TTSDEMOTODAY-cloudantNoSQLDB
+  env:
+    NODE_ENV: production
+    SECURE_EXPRESS: 1
+  command: npm start
